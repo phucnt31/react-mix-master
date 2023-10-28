@@ -13,10 +13,24 @@ const App = () => {
     {
       path: "/",
       element: <HomeLayout />,
-    },
-    {
-      path: "/about",
-      element: <About />,
+      children: [
+        {
+          path: "landing",
+          element: <Landing />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+        {
+          path: "cocktail",
+          element: <Cocktail />,
+        },
+        {
+          path: "newsletter",
+          element: <Newsletter />,
+        },
+      ],
     },
   ]);
 

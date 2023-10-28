@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const HomeLayout = () => {
   return (
     <div>
-      <Link to="/">back home</Link>
-      <h2>about</h2>
+      <nav>navbar</nav>
+      <Outlet />
     </div>
   );
 };
