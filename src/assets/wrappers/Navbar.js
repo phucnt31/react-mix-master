@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.nav`
-  background: var(--white);
+  background: #fff;
   .nav-center {
-    width: var(--view-width);
-    max-width: var(--max-width);
+    max-width: 1120px;
+    width: 90vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@ const Wrapper = styled.nav`
   }
   .logo {
     font-size: clamp(1.5rem, 3vw, 3rem);
-    color: var(--primary-500);
+    color: #10b981;
     font-weight: 700;
     letter-spacing: 2px;
   }
@@ -23,16 +23,16 @@ const Wrapper = styled.nav`
     margin-top: 1rem;
   }
   .nav-link {
-    color: var(--grey-900);
+    color: #0f172a;
     padding: 0.5rem 0.5rem 0.5rem 0;
-    transition: var(--transition);
+    transition: 0.3s ease-in-out all;
     letter-spacing: 2px;
   }
   .nav-link:hover {
-    color: var(--primary-500);
+    color: #10b981;
   }
   .active {
-    color: var(--primary-500);
+    color: #10b981;
   }
   @media (min-width: 768px) {
     .nav-center {
