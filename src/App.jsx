@@ -7,6 +7,7 @@ import {
   Newsletter,
   Cocktail,
 } from "./components";
+import { loader as landingLoader } from "./components/Landing";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const App = () => {
         {
           index: true,
           element: <Landing />,
+          loader: landingLoader,
         },
         {
           path: "about",
