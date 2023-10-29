@@ -9,6 +9,7 @@ import {
   SinglePageError,
 } from "./components";
 import { loader as landingLoader } from "./components/Landing";
+import { loader as cocktailLoader } from "./components/Cocktail";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -30,6 +31,7 @@ const App = () => {
         {
           path: "cocktail/:id",
           element: <Cocktail />,
+          loader: cocktailLoader,
         },
         {
           path: "newsletter",
