@@ -1,5 +1,6 @@
 import React from "react";
 import CocktailCard from "./CocktailCard";
+import Wrapper from "../assets/wrappers/CocktailList";
 
 const CocktailList = ({ drinks }) => {
   if (!drinks) {
@@ -20,11 +21,11 @@ const CocktailList = ({ drinks }) => {
   });
 
   return (
-    <div>
+    <Wrapper>
       {formattedDrinks.map((drink) => {
         return <CocktailCard key={drink.id} {...drink} />;
       })}
-    </div>
+    </Wrapper>
   );
 };
 
