@@ -1,6 +1,7 @@
 import React from "react";
 import { useLoaderData, Link } from "react-router-dom";
 import axios from "axios";
+import Wrapper from "../assets/wrappers/CocktailPage";
 
 const singleCocktailUrl =
   "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
@@ -25,7 +26,7 @@ const Cocktail = () => {
   } = singleDrink;
 
   return (
-    <div>
+    <Wrapper>
       <header>
         <Link to="/" className="btn">
           back home
@@ -57,7 +58,7 @@ const Cocktail = () => {
           </p>
         </div>
       </div>
-    </div>
+    </Wrapper>
   );
 };
 
