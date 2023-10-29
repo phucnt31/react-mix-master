@@ -6,6 +6,7 @@ import {
   Error,
   Newsletter,
   Cocktail,
+  SinglePageError,
 } from "./components";
 import { loader as landingLoader } from "./components/Landing";
 
@@ -20,6 +21,7 @@ const App = () => {
           index: true,
           element: <Landing />,
           loader: landingLoader,
+          errorElement: <SinglePageError />,
         },
         {
           path: "about",
