@@ -28,7 +28,7 @@ const App = () => {
           element: <About />,
         },
         {
-          path: "cocktail",
+          path: "cocktail/:id",
           element: <Cocktail />,
         },
         {
