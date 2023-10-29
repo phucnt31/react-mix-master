@@ -6,11 +6,14 @@ const singleCocktailUrl =
   "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
 export const loader = async ({ params }) => {
-  console.log(params);
-  return null;
+  const { id } = params;
+  const { data } = await axios.get(`${singleCocktailUrl}${id}`);
+  return { data, id };
 };
 
 const Cocktail = () => {
+  const { data } = useLoaderData();
+  console.log(data);
   return <div>Cocktail</div>;
 };
 
