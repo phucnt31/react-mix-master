@@ -1,8 +1,8 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import axios from "axios";
-import SearchForm from "./SearchForm";
-import CocktailList from "./CocktailList";
+import SearchForm from "../components/SearchForm";
+import CocktailList from "../components/CocktailList";
 import { useQuery } from "@tanstack/react-query";
 
 const cocktailSearchUrl =
