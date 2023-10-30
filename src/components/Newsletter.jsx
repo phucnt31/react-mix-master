@@ -38,7 +38,7 @@ const Newsletter = () => {
           name="name"
           id="name"
           className="form-input"
-          defaultValue="john"
+          required
         />
       </div>
       {/* lastName */}
@@ -51,7 +51,7 @@ const Newsletter = () => {
           name="lastName"
           id="lastName"
           className="form-input"
-          defaultValue="smith"
+          required
         />
       </div>
       {/* email */}
