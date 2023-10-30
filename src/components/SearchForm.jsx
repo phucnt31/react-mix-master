@@ -1,8 +1,9 @@
 import React from "react";
+import Wrapper from "../assets/wrappers/SearchForm";
 
 const SearchForm = () => {
   return (
-    <div>
+    <Wrapper>
       <form className="form">
         <input
           type="text"
@@ -14,7 +15,7 @@ const SearchForm = () => {
           search
         </button>
       </form>
-    </div>
+    </Wrapper>
   );
 };
 
