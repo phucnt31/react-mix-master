@@ -10,6 +10,7 @@ import {
 } from "./components";
 import { loader as landingLoader } from "./components/Landing";
 import { loader as cocktailLoader } from "./components/Cocktail";
+import { action as newsletterAction } from "./components/Newsletter";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -36,6 +37,7 @@ const App = () => {
         {
           path: "newsletter",
           element: <Newsletter />,
+          action: newsletterAction,
         },
       ],
     },
