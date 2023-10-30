@@ -1,20 +1,21 @@
 import React from "react";
 import Wrapper from "../assets/wrappers/SearchForm";
+import { Form } from "react-router-dom";
 
-const SearchForm = () => {
+const SearchForm = ({ searchTerm }) => {
   return (
     <Wrapper>
-      <form className="form">
+      <Form className="form">
         <input
-          type="text"
+          type="search"
           name="search"
           className="form-input"
-          defaultValue="vodka"
+          defaultValue={searchTerm}
         />
         <button type="submit" className="btn">
           search
         </button>
-      </form>
+      </Form>
     </Wrapper>
   );
 };
