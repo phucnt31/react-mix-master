@@ -42,7 +42,7 @@ const App = () => {
         {
           path: "cocktail/:id",
           element: <Cocktail />,
-          loader: cocktailLoader,
+          loader: cocktailLoader(queryClient),
         },
         {
           path: "newsletter",
