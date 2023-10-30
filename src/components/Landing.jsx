@@ -18,17 +18,19 @@ const searchCocktails = (searchTerm) => {
   };
 };
 
-export const loader = async ({ request }) => {
-  const url = new URL(request.url);
-  const searchTerm = url.searchParams.get("search") || "";
-
-  return { searchTerm };
-};
+export const loader =
+  (queryClient) =>
+  async ({ request }) => {
+    const url = new URL(request.url);
+    const searchTerm = url.searchParams.get("search") || "";
+    await queryClient.ensureQueryData(searchCocktails(searchTerm));
+    return { searchTerm };
+  };
 
 const Landing = () => {
   const { searchTerm } = useLoaderData();
-  const { data: drinks, isLoading } = useQuery(searchCocktails(searchTerm));
-  console.log(isLoading);
+  const { data: drinks } = useQuery(searchCocktails(searchTerm));
+
   return (
     <>
       <SearchForm searchTerm={searchTerm} />
