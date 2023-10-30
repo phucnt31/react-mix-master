@@ -7,10 +7,10 @@ import {
   Newsletter,
   Cocktail,
   SinglePageError,
-} from "./components";
-import { loader as landingLoader } from "./components/Landing";
-import { loader as cocktailLoader } from "./components/Cocktail";
-import { action as newsletterAction } from "./components/Newsletter";
+} from "./pages";
+import { loader as landingLoader } from "./pages/Landing";
+import { loader as cocktailLoader } from "./pages/Cocktail";
+import { action as newsletterAction } from "./pages/Newsletter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
