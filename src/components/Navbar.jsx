@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Wrapper from "../assets/wrappers/Navbar";
 
 const Navbar = () => {
@@ -8,15 +8,15 @@ const Navbar = () => {
       <div className="nav-center">
         <span className="logo">MixMaster</span>
         <div className="nav-links">
-          <Link to="/" className="nav-link">
+          <NavLink to="/" className="nav-link">
             Home
-          </Link>
-          <Link to="/about" className="nav-link">
+          </NavLink>
+          <NavLink to="/about" className="nav-link">
             About
-          </Link>
-          <Link to="/newsletter" className="nav-link">
+          </NavLink>
+          <NavLink to="/newsletter" className="nav-link">
             Newsletter
-          </Link>
+          </NavLink>
         </div>
       </div>
     </Wrapper>
