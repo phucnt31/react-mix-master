@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData, Link, Navigate } from "react-router-dom";
+import { useLoaderData, Link, Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Wrapper from "../assets/wrappers/CocktailPage";
 import { useQuery } from "@tanstack/react-query";
@@ -28,6 +28,7 @@ export const loader =
 const Cocktail = () => {
   const { id } = useLoaderData();
   const { data } = useQuery(singleCocktail(id));
+  const navigate = useNavigate();
 
   if (!data.drinks) {
     return <Navigate to="/" />;
@@ -52,9 +53,9 @@ const Cocktail = () => {
   return (
     <Wrapper>
       <header>
-        <Link to="/" className="btn">
+        <button type="button" className="btn" onClick={() => navigate(-1)}>
           back home
-        </Link>
+        </button>
         <h3>{name}</h3>
       </header>
       <div className="drink">
